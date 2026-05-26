@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sanjay M N — Cybersecurity & AI/ML Portfolio</title>
+<title>Sanjay M N — Cybersecurity Portfolio</title>
 
 <!-- Primary Meta -->
-<meta name="title" content="Sanjay M N — Cybersecurity & AI/ML Portfolio"/>
-<meta name="description" content="Final-year CS student, Cybersecurity Intern at Ashtaksha Labs, and published researcher at SmartCom 2026. Building at the intersection of security and intelligence."/>
+<meta name="title" content="Sanjay M N — Cybersecurity Portfolio"/>
+<meta name="description" content="Final-year CS student and Cybersecurity Enthusiast. Intern at Ashtaksha Labs. Published researcher at SmartCom 2026. Focused on encryption, IDS, and network security."/>
 <meta name="author" content="Sanjay M N"/>
 <meta name="keywords" content="Sanjay M N, Cybersecurity, AI, ML, Portfolio, Ashtaksha Labs, PalmNet, RBAC, Python, Nmap, Wireshark, Kali Linux"/>
 
 <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://Sanjj10.github.io/"/>
-<meta property="og:title" content="Sanjay M N — Cybersecurity & AI/ML Portfolio"/>
-<meta property="og:description" content="Final-year CS student, Cybersecurity Intern at Ashtaksha Labs, and published researcher at SmartCom 2026. Encryption · IDS · Network Security · AI/ML."/>
+<meta property="og:title" content="Sanjay M N — Cybersecurity Portfolio"/>
+<meta property="og:description" content="Cybersecurity Enthusiast. Intern at Ashtaksha Labs. Hands-on with AES-256, Nmap, Wireshark, Suricata, and more. Published @ SmartCom 2026."/>
 <meta property="og:image" content="https://avatars.githubusercontent.com/Sanjj10"/>
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Sanjay M N — Cybersecurity & AI/ML Portfolio"/>
-<meta name="twitter:description" content="Final-year CS student, Cybersecurity Intern at Ashtaksha Labs, and published researcher at SmartCom 2026."/>
+<meta name="twitter:title" content="Sanjay M N — Cybersecurity Portfolio"/>
+<meta name="twitter:description" content="Cybersecurity Enthusiast and Intern at Ashtaksha Labs. Published @ SmartCom 2026."/>
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/Sanjj10"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
@@ -140,18 +140,81 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
 .footer-links a:hover{color:var(--accent)}
-@media(max-width:700px){
-  .about-inner,.idol-section,[data-about]{grid-template-columns:1fr}
-  .idol-img{min-height:220px}
-  .edu-row{grid-template-columns:80px 1fr}
-  .edu-score{display:none}
-  .skills-row{grid-template-columns:1fr}
+@media(max-width:800px){
+  /* NAV */
   nav{padding:1rem 1.25rem}
-  .nav-links{gap:1rem}
-  .hero{padding:4rem 1.25rem 3rem}
-  section{padding:3rem 1.25rem}
+  .nav-links{gap:.8rem}
+  .nav-links a{font-size:10px}
+
+  /* HERO GRID → single column, hide terminal */
+  div[style*="grid-template-columns:1fr 1fr;min-height:90vh"]{
+    grid-template-columns:1fr !important;
+    padding:2rem 1.25rem !important;
+    min-height:auto !important;
+    gap:2rem !important;
+  }
+  #terminal{display:block !important}
+  .hero{padding:3rem 0 2rem !important;max-width:100% !important}
+  .hero h1{font-size:clamp(2.8rem,12vw,5rem)}
+
+  /* SECTIONS */
+  section{padding:2.5rem 1.25rem}
+
+  /* ABOUT photo layout */
+  div[style*="grid-template-columns:280px 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+  div[style*="grid-template-columns:280px 1fr"] > div:first-child{
+    min-height:280px !important;
+    max-height:320px !important;
+  }
+
+  /* IDOL */
+  .idol-section{grid-template-columns:1fr !important}
+  .idol-img{min-height:220px}
+
+  /* EDUCATION */
+  .edu-row{grid-template-columns:80px 1fr !important}
+  .edu-score{display:none}
+
+  /* SKILLS */
+  .skills-row{grid-template-columns:1fr !important}
+  .skills-cat{padding:.8rem 1rem !important}
+
+  /* PROJECTS */
   .proj-tabs{flex-wrap:wrap}
-  .cv-box{flex-direction:column;align-items:flex-start}
+  .proj-pane.active{grid-template-columns:1fr !important}
+
+  /* CONTACT */
+  .contact-box{padding:1.5rem !important}
+  .contact-grid{grid-template-columns:1fr !important}
+
+  /* CV */
+  .cv-box{flex-direction:column !important;align-items:flex-start !important;padding:1.5rem !important}
+
+  /* CERT */
+  .cert-grid{grid-template-columns:1fr 1fr !important}
+
+  /* STAT GRID */
+  .stat-grid{grid-template-columns:1fr 1fr}
+
+  /* HERO CTA */
+  .hero-cta{flex-direction:column}
+  .btn{text-align:center}
+
+  /* STRIP */
+  .strip-item{padding:0 1.2rem}
+
+  /* FOOTER */
+  footer{flex-direction:column;align-items:flex-start;padding:1.5rem 1.25rem}
+  .footer-links{gap:1rem;flex-wrap:wrap}
+}
+
+@media(max-width:400px){
+  .hero h1{font-size:2.5rem}
+  .nav-links{gap:.5rem}
+  .nav-links a{font-size:9px}
+  .cert-grid{grid-template-columns:1fr !important}
 }
 
 /* ── SCROLL FADE IN ── */
@@ -232,6 +295,18 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 /* ── SKILL ROW HOVER ── */
 .skills-row:hover .skills-cat span { color: var(--text); transition: color 0.2s; }
 
+
+@media(max-width:800px){
+  #terminal{
+    max-width:100% !important;
+    font-size:11px !important;
+  }
+  #term-body{
+    min-height:220px !important;
+    padding:1rem !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -249,15 +324,26 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 
 <div style="display:grid;grid-template-columns:1fr 1fr;min-height:90vh;align-items:center;max-width:1200px;margin:0 auto;padding:0 2.5rem;gap:2rem">
   <div class="hero">
-    <div class="hero-tag">Cybersecurity Enthusiast · AI/ML Builder · Published Researcher</div>
-    <h1>Securing<br/><span>systems.</span><br/>Building minds.</h1>
-    <p class="hero-desc">Final-year CS student at East Point College of Engineering & Technology, Bengaluru. Cybersecurity intern at Ashtaksha Labs. Published researcher at SmartCom 2026. I build at the intersection of security and intelligence.</p>
+    <div class="hero-tag">Cybersecurity Enthusiast · Published Researcher</div>
+    <h1>Securing<br/><span>systems.</span><br/>Defending worlds.</h1>
+    <p class="hero-desc">Final-year CS student passionate about Cybersecurity. Intern at Ashtaksha Labs Pvt Ltd — hands-on with encryption, network security, and intrusion detection. Published researcher at SmartCom 2026. I also build AI/ML projects on the side.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">See My Work</a>
       <a href="#cv" class="btn btn-outline">Download Resume</a>
     </div>
   </div>
 
+
+  <!-- Mobile only: show stats instead of terminal -->
+  <div id="mobile-hero-card" style="display:none;background:#161616;border:1px solid rgba(255,255,255,0.08);padding:1.5rem;border-top:2px solid #E24B4A;margin-top:1.5rem">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;color:#E24B4A;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem">Quick Stats</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08)">
+      <div style="background:#0E0E0E;padding:1rem"><span style="font-size:1.8rem;font-weight:800;display:block">6+</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:#888780;text-transform:uppercase">Projects</span></div>
+      <div style="background:#0E0E0E;padding:1rem"><span style="font-size:1.8rem;font-weight:800;display:block">1</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:#888780;text-transform:uppercase">Research Paper</span></div>
+      <div style="background:#0E0E0E;padding:1rem"><span style="font-size:1.8rem;font-weight:800;display:block">4</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:#888780;text-transform:uppercase">Certifications</span></div>
+      <div style="background:#0E0E0E;padding:1rem"><span style="font-size:1.8rem;font-weight:800;display:block">∞</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:#888780;text-transform:uppercase">CVEs to Hunt</span></div>
+    </div>
+  </div>
   <!-- TERMINAL -->
   <div style="display:flex;align-items:center;justify-content:center;padding:2rem 0">
     <div id="terminal" style="background:#0d1117;border:1px solid rgba(255,255,255,0.1);border-radius:8px;width:100%;max-width:480px;font-family:var(--mono);font-size:13px;overflow:hidden;box-shadow:0 0 40px rgba(226,75,74,0.15)">
@@ -364,6 +450,18 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 
 /* ── SKILL ROW HOVER ── */
 .skills-row:hover .skills-cat span { color: var(--text); transition: color 0.2s; }
+
+
+@media(max-width:800px){
+  #terminal{
+    max-width:100% !important;
+    font-size:11px !important;
+  }
+  #term-body{
+    min-height:220px !important;
+    padding:1rem !important;
+  }
+}
 
 </style>
 
@@ -478,8 +576,8 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 <section id="projects" class="reveal">
   <div class="section-label">Projects</div>
   <div class="proj-tabs">
-    <button class="proj-tab active" onclick="showTab(event,'cyber')">Cybersecurity</button>
-    <button class="proj-tab" onclick="showTab(event,'aiml')">AI / ML</button>
+    <button class="proj-tab active" onclick="showTab(event,'cyber')">🔐 Cybersecurity</button>
+    <button class="proj-tab" onclick="showTab(event,'aiml')">AI / ML ↗</button>
     <button class="proj-tab" onclick="showTab(event,'mini')">Lab Work</button>
   </div>
 
@@ -556,6 +654,7 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
 
 <section id="skills" class="reveal">
   <div class="section-label">Technical Skills</div>
+  <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:1.5rem;letter-spacing:.04em">Core focus: <span style="color:var(--accent)">Cybersecurity</span> — with additional experience in AI/ML.</p>
   <div class="skills-table">
     <div class="skills-row">
       <div class="skills-cat"><span>Security Tools</span></div>
@@ -649,7 +748,7 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;justi
     <div style="background:var(--surface);padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem">
       <div>
         <div class="about-heading">Sanjay<br/><span>M N</span></div>
-        <p class="about-body">Final-year CS student at East Point College, Bengaluru. Cybersecurity enthusiast with real-world internship experience in encryption, IDS, and network security.<br/><br/>I also build AI/ML systems — from palm disease detection to resume analysis. Published researcher at SmartCom 2026 (Springer Nature).<br/><br/>Open to internships, research collaborations, and anything that pushes me technically.</p>
+        <p class="about-body">Final-year CS student at East Point College, Bengaluru. My core focus is Cybersecurity — encryption, network security, intrusion detection, and threat analysis from my internship at Ashtaksha Labs.<br/><br/>On the side, I build AI/ML projects including a published research paper at SmartCom 2026 (Springer Nature).<br/><br/>Open to cybersecurity roles, internships, and research collaborations.</p>
       </div>
       <div class="stat-grid">
         <div class="stat-cell"><span class="stat-num">6+</span><span class="stat-label">Projects Built</span></div>
@@ -755,5 +854,18 @@ function showTab(e, name) {
 })();
 </script>
 
+
+<script>
+// Show mobile card on small screens
+(function(){
+  function checkMobile(){
+    var card = document.getElementById('mobile-hero-card');
+    if(!card) return;
+    card.style.display = 'none';
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+})();
+</script>
 </body>
 </html>
